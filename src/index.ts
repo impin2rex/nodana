@@ -11,8 +11,6 @@ export class Nodana {
   }
 }
 
-import { getVersion } from "./getVersion";
-
 /**
  *  return the arguments of the command except node and index.ts
  */
@@ -26,15 +24,16 @@ const getArgs = () => {
  * Command Help
  */
 const printCommandHelp = () => {
-  const version = getVersion();
   const help = `
-nodana (version: ${version})
+nodana
 
 SOLANA CLI command to retrieve information.
 
 Example:
 
 $ nodana --wallet-balance <WALLET_ADDR>
+
+$ nodana --airdrop 1 <WALLET_ADDR>
 
 `;
   console.log(help);
@@ -45,7 +44,6 @@ const symbols = getArgs();
 // Print help if no arguments
 if (symbols.length === 0) {
   printCommandHelp();
-  getVersion();
   process.exit(0);
 }
 
