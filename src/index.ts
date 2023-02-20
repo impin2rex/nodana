@@ -55,9 +55,29 @@ if (process.argv[2] === "--wallet-balance") {
     console.log("Please provide a wallet address");
     process.exit(0);
   }
-  console.log(`Retrieving balance`);
+  console.log(`Retrieving balance of wallet: ${wallet}`);
   const nodana = new Nodana({ network: Network.Devnet });
   nodana.wallet.fetchBalance(process.argv[3]).then(console.log);
+}
+
+if (process.argv[2] === "--airdrop") {
+  const sol = process.argv[3];
+  if (!sol) {
+    console.log("Please provide amount");
+    process.exit(0);
+  }
+  const wallet = process.argv[4];
+  if (!wallet) {
+    console.log("Please provide a wallet address");
+    process.exit(0);
+  }
+  if (parseFloat(sol) > 1) {
+    console.log("Not allowed to airdrop more than 1 SOL");
+    process.exit(0);
+  }
+  console.log(`Airdrop 🚀 to wallet: ${wallet}`);
+  const nodana = new Nodana({ network: Network.Devnet });
+  nodana.wallet.requestAirDrop(wallet, parseFloat(sol)).then(console.log);
 }
 
 export * from "@/types";

@@ -14,4 +14,6 @@ Install with npm
 
 ```bash
 nodana --walet-balance <WALLET_ADDR>
+
+nodana --airdrop 1 <WALLET_ADDR>
 ```

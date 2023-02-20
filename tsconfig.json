@@ -4,22 +4,21 @@
     "tests"
   ],
   "compilerOptions": {
-    "target": "es2017",
-    "moduleResolution": "node",
-    "sourceMap": true,
     "baseUrl": ".",
+    "rootDir": ".",
+    "target": "es2018",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "declaration": true,
+    "sourceMap": true,
+    "strict": true,
+    "noImplicitAny": false,
+    "esModuleInterop": true,
     "paths": {
       "@/*": [
         "src/*"
       ]
-    },
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "resolveJsonModule": true,
-    "declaration": true,
-    "strict": true,
-    "noImplicitAny": false,
-    "esModuleInterop": true,
+    }
   },
   "ts-node": {
     "require": [
