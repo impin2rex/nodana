@@ -18,7 +18,8 @@
   "keywords": [
     "solana-cli",
     "typescript-solana-cli",
-    "Node JS Solana CLI"
+    "Node JS Solana CLI",
+    "TypeScript Solana CLI"
   ],
   "author": "Pintu Das",
   "repository": {
