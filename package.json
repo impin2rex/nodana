@@ -1,6 +1,6 @@
 {
   "name": "nodana",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "A Node JS Solana CLI",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -12,7 +12,8 @@
     "clean": "rimraf dist",
     "build:esm": "tsc --project tsconfig.esm.json && tsc-alias -p tsconfig.esm.json",
     "build:cjs": "tsc --project tsconfig.cjs.json && tsc-alias -p tsconfig.cjs.json",
-    "build": "npm run clean && npm run build:esm && npm run build:cjs"
+    "build": "npm run clean && npm run build:esm && npm run build:cjs",
+    "semantic-release": "semantic-release"
   },
   "keywords": [
     "solana-cli",
@@ -22,10 +23,10 @@
   "author": "Pintu Das",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Shyft-to/js.git"
+    "url": "https://github.com/impin2rex/nodana.git"
   },
   "bugs": {
-    "url": "https://github.com/Shyft-to/js/issues"
+    "url": "https://github.com/impin2rex/nodana/issues"
   },
   "homepage": "https://impin2rex.github.io",
   "license": "MIT",
@@ -41,9 +42,14 @@
     "ts-node": "^10.9.1",
     "tsc-alias": "^1.8.2",
     "tsconfig-paths": "^4.1.2",
-    "typescript": "^4.9.5"
+    "typescript": "^4.9.5",
+    "semantic-release": "^20.1.0"
   },
   "dependencies": {
     "@solana/web3.js": "^1.73.2"
+  },
+  "private": false,
+  "publishConfig": {
+    "access": "public"
   }
 }
