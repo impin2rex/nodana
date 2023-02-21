@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { WalletClient } from "@/clients";
 import { Network, NodanaSettings } from "@/types";
 import { NodanaConfig } from "@/utils";
